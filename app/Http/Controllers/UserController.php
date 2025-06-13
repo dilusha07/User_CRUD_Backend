@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\UserModel;
 
 class UserController extends Controller
 {
@@ -27,7 +28,7 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $user = $this->user->find($id);  
     }
 
     /**
