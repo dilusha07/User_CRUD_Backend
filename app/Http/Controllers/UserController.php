@@ -46,6 +46,7 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $user = $this->user->find($id);
+        return $user->delete();   
     }
 }
