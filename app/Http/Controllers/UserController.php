@@ -7,6 +7,16 @@ use App\Models\UserModel;
 
 class UserController extends Controller
 {
+    protected $user;
+
+
+    // Constructor injection to assign the model
+    public function __construct(UserModel $user)
+    {
+        $this->user = $user;
+    }
+
+
     /**
      * Display a listing of the resource.
      */

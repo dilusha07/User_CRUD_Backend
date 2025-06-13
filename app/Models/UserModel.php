@@ -2,13 +2,16 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class UserModel extends Model
 {
-    //
+    use HasFactory;
+
     protected $table = 'users';
     protected $primaryKey = 'id';
+
     protected $fillable = [
         'name',
         'email',
@@ -17,5 +20,4 @@ class UserModel extends Model
         'profile_image',
         'user_status'
     ];
-    use HasFactory;
 }

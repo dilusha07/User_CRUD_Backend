@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('user_name')->nullable();
             $table->string('password')->nullable();
             $table->binary('profile_image');
-            $table->boolean('user_status');
+            $table->boolean('user_status')->default('Active');
             $table->timestamps();
         });
     }
